@@ -70,7 +70,7 @@ const cloudinary = require('cloudinary').v2;
     cloudinary.config({ 
         cloud_name: 'dga6z71xk', 
         api_key: '976141746436927', 
-        api_secret: 'KPKGw9Ul7MMXUsAnxShAXGvWpuE' 
+        api_secret: process.env.CLOUDINARY_KEY
     });
     
 
