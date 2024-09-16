@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'MRNA';
+  margin: 0;
+  background-color: white;
+  color: gray;
+}
+
+@font-face {
+  font-family: 'MRNA';
+  src: url('../public/fonts/mrna.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}

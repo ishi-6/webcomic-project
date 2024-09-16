@@ -1,0 +1,95 @@
+
+/* components  */
+
+  .containerE{
+    
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  /* handles comicwrapper, and pagination */
+  .container {
+    display: flex;
+     /* for when i want two panel 'pages' beside each other ??*/
+    flex-direction: row; 
+    align-items: flex-end;
+    justify-content: center;
+  
+    
+  }
+  
+  /* to separate text and panels. if row- overlap */
+  .comicWrapper {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    
+     
+  }
+  
+   /* if you want side by side, style={{flexDirection: 'row'}} in div comicPanels */
+  .comicPanels {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .panel {
+    display: flex;
+    margin: 10px;
+    /* max-inline-size: 700px; */
+    align-items: flex-end;
+  }
+  
+  .text {
+    flex: 1;
+    text-align: center;
+    font-size: 23px;
+    
+  }
+
+  /* stylization tools */
+  .fadeInAni {
+    animation: fadeIn 1s ease-in;
+  }
+
+  .fadeInAni2{
+    animation: fadeIn 2s ease-in;
+  }
+
+  .fadeInAni3{
+    animation: fadeIn 4s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* pagination */
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination .link {
+    margin: 0 10px;
+    padding: 10px 20px;
+    /* background-color: #ffffff; */
+    color: rgb(201, 201, 201);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .link:hover {
+    background-color: #969696;
+}
