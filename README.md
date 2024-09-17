@@ -1,2 +1,2 @@
 didnt upload .env file to github (since they contain api keys) <br>
-see it here: ishi6.vercel.app
+see it here: <a href="ishi6.vercel.app">ishi6.vercel.app</a>
