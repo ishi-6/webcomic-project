@@ -40,7 +40,7 @@
   .panel {
     display: flex;
     margin: 10px;
-    /* max-inline-size: 700px; */
+    max-inline-size: 700px;
     align-items: flex-end;
   }
   

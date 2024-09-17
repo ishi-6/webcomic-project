@@ -18,9 +18,9 @@ export default function Page2() {
       // audio.autoplay = true;
       
       const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === 'ArrowRight') {
-          router.push('./page3');
-        }
+        // if (event.key === 'ArrowRight') {
+        //   router.push('./page3');
+        // }
         if (event.key === 'ArrowLeft') {
           router.push('./');
         }
@@ -65,8 +65,8 @@ export default function Page2() {
 </div>
 </div>
 <div className={styles.pagination}>
-        <Link href="/page3" className={styles.link}>turn
-        </Link>
+        {/* <Link href="/page3" className={styles.link}>turn
+        </Link> */}
       </div>
 
 </div>
