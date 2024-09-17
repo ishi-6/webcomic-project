@@ -41,7 +41,7 @@
   .panel {
     display: flex;
     margin: 10px;
-    max-width: 50%;
+    max-width: 100%;
     /* max-inline-size: 700px; */
     align-items: flex-end;
     object-fit: contain;
