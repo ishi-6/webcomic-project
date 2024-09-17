@@ -18,9 +18,9 @@ export default function Page2() {
       // audio.autoplay = true;
       
       const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.key === 'ArrowRight') {
-          router.push('./');
-        }
+        // if (event.key === 'ArrowRight') {
+        //   router.push('./');
+        // }
         if (event.key === 'ArrowLeft') {
           router.push('./page2');
         }
@@ -39,34 +39,41 @@ export default function Page2() {
   return (
   
 
-    <div className={styles.containerE}>
+    <div className={styles.containerE} >
       
       <div className={styles.pagination}>
         <Link href="/page2" className={styles.link}>return
         </Link>
         </div>
 
-<div className={styles.container}>
-<div className={styles.comicWrapper}>
-  <div className={styles.comicPanels}>
+{/* <div className={styles.container}> */}
+{/* <div className={styles.comicWrapper}> */}
+  {/* <div className={styles.comicPanels}>
     <img src="/panels/02.png" className={styles.panel} />
-  </div>
-  <div className={styles.text}> 
+  </div> */}
+  {/* <div className={styles.text}> 
     <p>...</p>
-  </div>
-</div>
-<div className={styles.container}>
+  </div> */}
+{/* </div> */}
+
+<div className={styles.container} >
 <div className={styles.comicWrapper}>
-  <div className={styles.comicPanels}>
+  <div className={styles.comicPanels} style={{ maxWidth: '50em' }}  >
     <img src="/panels/03.png" className={styles.panel} />
   </div>
   <div className={styles.text}> 
     <p>...Woah.</p>
   </div>
-</div>
-</div>
+
+  
 </div>
 
+</div>
+{/* </div> */}
+<div className={styles.pagination}>
+        <Link href="/page2" className={styles.link}>turn
+        </Link>
+        </div>
 </div> 
 
   );

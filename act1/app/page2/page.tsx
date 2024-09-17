@@ -18,9 +18,9 @@ export default function Page2() {
       // audio.autoplay = true;
       
       const handleKeyDown = (event: KeyboardEvent) => {
-        // if (event.key === 'ArrowRight') {
-        //   router.push('./page3');
-        // }
+        if (event.key === 'ArrowRight') {
+          router.push('./page3');
+        }
         if (event.key === 'ArrowLeft') {
           router.push('./');
         }
@@ -53,20 +53,20 @@ export default function Page2() {
     <p>...</p>
   </div>
 </div>
-<div className={styles.container}>
-<div className={styles.comicWrapper}>
-  <div className={styles.comicPanels}>
+{/* <div className={styles.container}>
+<div className={styles.comicWrapper}> */}
+  {/* <div className={styles.comicPanels}>
     <img src="/panels/03.png" className={styles.panel} />
-  </div>
-  <div className={styles.text}> 
+  </div> */}
+  {/* <div className={styles.text}> 
     <p>...Woah.</p>
-  </div>
-</div>
-</div>
+  </div> */}
+{/* </div>
+</div> */}
 </div>
 <div className={styles.pagination}>
-        {/* <Link href="/page3" className={styles.link}>turn
-        </Link> */}
+        <Link href="/page3" className={styles.link}>turn
+        </Link>
       </div>
 
 </div>
