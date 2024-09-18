@@ -28,11 +28,9 @@ const comicRoutes = require('./routes/comics');
 // use routes
 app.use('/api/comics', comicRoutes);
 
-// fallback (only after all other routes) ---
-// add new API route 
-app.use('/api/comics', comicRoutes);
 // serve static files
 app.use(express.static(path.join(__dirname, '../homestuck/act1')));
+
 // fallback route for all unknown requests
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../homestuck/act1', 'index.html'));
@@ -46,12 +44,6 @@ app.get('/', (req, res) => {
 // start server
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
-});
-// serve static files 
-app.use(express.static(path.join(__dirname, '../homestuck/act1')));
-// direct unknown routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../homestuck/act1', 'index.html'));
 });
 
 
