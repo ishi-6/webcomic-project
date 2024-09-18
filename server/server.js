@@ -32,10 +32,10 @@ app.use('/api/comics', comicRoutes);
 // add new API route 
 app.use('/api/comics', comicRoutes);
 // serve static files
-app.use(express.static(path.join(__dirname, 'homestuck/act1')));
+app.use(express.static(path.join(__dirname, '../homestuck/act1')));
 // fallback route for all unknown requests
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'homestuck/act1', 'index.html'));
+  res.sendFile(path.join(__dirname, '../homestuck/act1', 'index.html'));
 });
 
 
@@ -48,10 +48,10 @@ app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
 });
 // serve static files 
-app.use(express.static(path.join(__dirname, 'homestuck/act1')));
+app.use(express.static(path.join(__dirname, '../homestuck/act1')));
 // direct unknown routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'homestuck/act1', 'index.html'));
+  res.sendFile(path.join(__dirname, '../homestuck/act1', 'index.html'));
 });
 
 
