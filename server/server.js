@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 
 // middleware
 app.use(cors()); // express
-app.use(express.json()); // Parse incoming JSON requests
+app.use(express.json()); // parse incoming JSON requests
 
 // mongoDB connection
 console.log('Mongo URI:', process.env.MONGO_URI);
@@ -28,14 +28,12 @@ const comicRoutes = require('./routes/comics');
 // use routes
 app.use('/api/comics', comicRoutes);
 
-// some backup stuff
-// Add new API route above the wildcard route
-app.use('/api/comics', comicRoutes); // Your comic API routes
-
-// Serve static files
+// fallback (only after all other routes) ---
+// add new API route 
+app.use('/api/comics', comicRoutes);
+// serve static files
 app.use(express.static(path.join(__dirname, 'homestuck/act1')));
-
-// Fallback route for all unknown requests (only after all other routes)
+// fallback route for all unknown requests
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'homestuck/act1', 'index.html'));
 });
@@ -45,15 +43,12 @@ app.get('*', (req, res) => {
 app.get('/', (req, res) => {
   res.send('comic API');
 });
-
 // start server
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);
 });
-
 // serve static files 
 app.use(express.static(path.join(__dirname, 'homestuck/act1')));
-
 // direct unknown routes
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'homestuck/act1', 'index.html'));
