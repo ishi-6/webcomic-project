@@ -59,7 +59,7 @@ export default function Home() {
             ) : (
               <p>Loading...</p>
             )}
-          <img src="/panels/02.png" className={`${styles.panel} ${styles.fadeInAni2}`} />
+          <img src="/panels/01.png" className={`${styles.panel} ${styles.fadeInAni2}`} />
         </div>
 
         <div className={`${styles.text} ${styles.fadeInAni3}`}>
