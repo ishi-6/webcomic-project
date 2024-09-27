@@ -32,16 +32,16 @@ app.use('/api/comics', comicRoutes);
 // serve static files
 app.use(express.static(path.join(__dirname, '../homestuck/act1')));
 
-// fallback route for all unknown requests
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../homestuck/act1', 'index.html'));
-});
-
-
 // simple test route
 app.get('/', (req, res) => {
   res.send('comic API');
 });
+
+// fallback route for all unknown requests
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '../homestuck/act1', 'index.html'));
+// });
+
 // start server
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`);

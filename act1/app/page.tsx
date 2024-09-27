@@ -55,11 +55,11 @@ export default function Home() {
         <div className={styles.comicPanels}>
           {/* <img src="/panels/01.png" className={`${styles.panel} ${styles.fadeInAni}`} /> */}
           {panel01Url ? (
-              <img src={panel01Url} className={`${styles.panel} ${styles.fadeInAni}`} />
+              <img src={panel01Url} className={`${styles.panel} ${styles.fadeInAni2}`} />
             ) : (
-              <p>Loading...</p>
+              <img src="/panels/01.png" className={`${styles.panel} ${styles.fadeInAni2}`} />
             )}
-          <img src="/panels/01.png" className={`${styles.panel} ${styles.fadeInAni2}`} />
+          {/* <img src="/panels/01.png" className={`${styles.panel} ${styles.fadeInAni2}`} /> */}
         </div>
 
         <div className={`${styles.text} ${styles.fadeInAni3}`}>
